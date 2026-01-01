@@ -56,7 +56,7 @@ def film_oner(df):
         ingilizce_tur=TUR_CEVIRI[istenen]
         filtre=df[df["Tur"].str.contains(ingilizce_tur,case=False,na=False)]
         if len(filtre)>0:
-            kaliteli=filtre[filtre["Puan"]>7.0]
+            kaliteli=filtre[filtre["Puan"]>7.8]
             if len(kaliteli)==0:
                 kaliteli=filtre
             secim=kaliteli.sample(n=1).iloc[0]
